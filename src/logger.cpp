@@ -7,14 +7,23 @@
 void addReading(const std::string& label, double value,
                 std::string labels[], double values[],
                 int& size, int capacity) {
+                    if (size == capacity) {
+                        throw std::string("Full");
+                    } else {
+                        labels[size] = label;
+                        values[size] = size;
+                        ++size;
+                    }
     // TODO: throw "Full" if size == capacity, else insert and ++size
 }
 
 void updateValue(double* valuePtr, double newValue) {
+    *valuePtr = newValue;
     // TODO: write through pointer
 }
 
 void printReading(const std::string& label, const double& value) {
+    std::cout << label << ": " << value << std::endl;
     // TODO: pretty-print one reading
 }
 
