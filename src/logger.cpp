@@ -14,21 +14,17 @@ void addReading(const std::string& label, double value,
                         values[size] = value;
                         ++size;
                     }
-    // TODO: throw "Full" if size == capacity, else insert and ++size
 }
 
 void updateValue(double* valuePtr, double newValue) {
     *valuePtr = newValue;
-    // TODO: write through pointer
 }
 
 void printReading(const std::string& label, const double& value) {
     std::cout << label << ": " << value << std::endl;
-    // TODO: pretty-print one reading
 }
 
 double average(const double values[], int size) {
-    // TODO: throw "Empty" if size==0, else compute average
     if (size == 0) {
         throw std::string("Empty");
     } else {
@@ -53,7 +49,6 @@ double minValue(const double values[], int size) {
         }
         return min;
     }
-    // TODO: throw "Empty" if size==0, else compute min
     return 0.0;
 }
 
@@ -70,6 +65,5 @@ double maxValue(const double values[], int size) {
         }
         return max;
     }
-    // TODO: throw "Empty" if size==0, else compute max
     return 0.0;
 }
